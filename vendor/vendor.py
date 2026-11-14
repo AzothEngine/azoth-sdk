@@ -21,9 +21,8 @@ MANIFEST = HERE / "manifest.json"
 # install_name_tool and codesign to give each dylib an identity that sits beside it.
 PREBUILT_RUNNERS = {"darwin": "macos-14", "win32": "ubuntu-latest", "linux": "ubuntu-latest"}
 BUILD_RUNNERS = {
-    # macos-15 for Xcode 16. Xcode 15.4 lacks parenthesized aggregate init, which
-    # Tracy needs. aarch64/win32 builds natively because cross-compiled host tools
-    # cannot run on an x64 runner.
+    # macos-15 for Xcode 16. aarch64/win32 builds natively because cross-compiled
+    # host tools cannot run on an x64 runner.
     ("x64", "darwin"): "macos-15",
     ("aarch64", "darwin"): "macos-15",
     ("x64", "win32"): "windows-latest",
