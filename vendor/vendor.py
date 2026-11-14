@@ -19,7 +19,7 @@ HERE = Path(__file__).resolve().parent
 MANIFEST = HERE / "manifest.json"
 # darwin staging needs the macOS toolchain: lipo to thin, and otool plus
 # install_name_tool and codesign to give each dylib an identity that sits beside it.
-PREBUILT_RUNNERS = {"darwin": "macos-14", "win32": "ubuntu-latest", "linux": "ubuntu-latest"}
+PREBUILT_RUNNERS = {"darwin": "macos-15", "win32": "ubuntu-latest", "linux": "ubuntu-latest"}
 BUILD_RUNNERS = {
     # macos-15 for Xcode 16. aarch64/win32 builds natively because cross-compiled
     # host tools cannot run on an x64 runner.
